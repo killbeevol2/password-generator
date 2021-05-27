@@ -11,15 +11,27 @@
 //   const symbols = "!@#$%^&*()_+";
 //   return symbols[Math.floor(Math.random()) * symbols.length];
 // }
+// for (let i = 0; i < 10; i++) {
+//   const num = Math.floor(Math.random * 4);
+//   if (num === 0) {
+//     getRandomLower();
+//   } else if (num === 1) {
+//     getRandomUpper();
+//   } else if (num === 2) {
+//     getRandomNumber();
+//   } else if (num === 3) {
+//     getRandomSymbol();
+//   }
+// }
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
 const generatePassword = () => {
-  const lower = "asdfhjl".split("");
+  const lower = "abcdefhijklmopqrstuvwxyz".split("");
   const upper = lower.join("").toUpperCase().split("");
-  const numeric = [1, 2, 3, 4, 5, 6, 7];
-  const specialChar = "!@#$%%^&".split("");
+  const numeric = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+  const specialChar = "!@#$`%^&()*".split("");
 
   const pwCount = parseInt(prompt("How long do you want your password to be?"));
 
@@ -27,7 +39,7 @@ const generatePassword = () => {
   let pw = "";
 
   if (!pwCount || pwCount < 8 || pwCount > 128) {
-    alert("does not meet requirement");
+    alert("Does not meet requirement");
     generatePassword();
   }
 
@@ -42,8 +54,6 @@ const generatePassword = () => {
 
   const userSpC = confirm("Do you want special characters?");
   if (userSpC) options.push(specialChar);
-
-  console.log(options);
 
   if (options.length === 0) {
     alert("Must select at least one option");
