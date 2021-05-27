@@ -1,32 +1,6 @@
-// function getRandomLower() {
-//   return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-// }
-// function getRandomUpper() {
-//   return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-// }
-// function getRandomNumber() {
-//   return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
-// }
-// function getRandomSymbol() {
-//   const symbols = "!@#$%^&*()_+";
-//   return symbols[Math.floor(Math.random()) * symbols.length];
-// }
-// for (let i = 0; i < 10; i++) {
-//   const num = Math.floor(Math.random * 4);
-//   if (num === 0) {
-//     getRandomLower();
-//   } else if (num === 1) {
-//     getRandomUpper();
-//   } else if (num === 2) {
-//     getRandomNumber();
-//   } else if (num === 3) {
-//     getRandomSymbol();
-//   }
-// }
-
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
-
+// Declaring all the possible characters in a string and in an array
 const generatePassword = () => {
   const lower = "abcdefhijklmopqrstuvwxyz".split("");
   const upper = lower.join("").toUpperCase().split("");
@@ -37,12 +11,12 @@ const generatePassword = () => {
 
   const options = [];
   let pw = "";
-
+  // Enter password length
   if (!pwCount || pwCount < 8 || pwCount > 128) {
     alert("Does not meet requirement");
     generatePassword();
   }
-
+  // Ask for all the different characters
   const userLower = confirm("Do you want a lower case character?");
   if (userLower) options.push(lower);
 
@@ -59,7 +33,7 @@ const generatePassword = () => {
     alert("Must select at least one option");
     generatePassword();
   }
-
+  // Making sure at least ONE option is picked
   if (options.length === 1) {
     const option = options[0];
     for (let i = 0; i < pwCount; i++) {
