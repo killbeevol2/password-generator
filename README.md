@@ -14,3 +14,5 @@ Created a generator using only Javascript while given the index.html.
 ![image](https://user-images.githubusercontent.com/79943553/119899727-5dcfd300-bef8-11eb-8a42-207f09ff4cb9.png)
 
 ## Link
+
+[Deploy Link](https://killbeevol2.github.io/password-generator/)
