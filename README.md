@@ -16,3 +16,4 @@ Created a generator using only Javascript while given the index.html.
 ## Link
 
 [Deploy Link](https://killbeevol2.github.io/password-generator/)
+[GitHub Link](https://github.com/killbeevol2/password-generator)
